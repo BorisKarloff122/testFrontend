@@ -1,0 +1,10 @@
+<mat-dialog-content>
+  <div class="header"><h2>Are you sure you want to delete "{{data.name}}"?</h2></div>
+  <div  class="sub-text">
+    <span *ngIf="data.type === 'folder'">This folder may contain files and folders</span>
+    <span>This action cannot be undone!</span>
+  </div>
+  <div class="button-container">
+    <button (click)="closeDialog()" mat-button>Delete</button>
+  </div>
+</mat-dialog-content>

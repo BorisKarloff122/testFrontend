@@ -1,0 +1,24 @@
+@mixin flex-block($align, $justify, $wrap){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+
+.button-container{
+  margin-top:26px;
+  @include flex-block(center, flex-start, wrap);
+}
+
+.button-container button{
+  @include flex-block(center, space-between, wrap);
+  margin:0 8px;
+}
+
+.button-container mat-icon{
+  margin-right:8px;
+  font-size:18px;
+  vertical-align: middle;
+  display: inline;
+}

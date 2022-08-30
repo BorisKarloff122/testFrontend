@@ -1,0 +1,13 @@
+<div class="element" (click)="action()">
+  <div class="block block-icon">
+    <mat-icon>{{elem.image}}</mat-icon>
+  </div>
+  <div class="name-block">
+    <div class="block block-name">{{elem.name}}</div>
+    <div class="block block-ext">{{elem.type}}</div>
+  </div>
+  <div class="tool-block">
+    <mat-icon [matTooltip]="'Download file'" *ngIf="elem.type !== 'folder'" (click)="downloadElement(elem)">download</mat-icon>
+    <mat-icon [matTooltip]="'Delete file'" (click)="removeElement()">delete</mat-icon>
+  </div>
+</div>

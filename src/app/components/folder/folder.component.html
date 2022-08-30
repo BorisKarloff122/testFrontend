@@ -1,0 +1,11 @@
+<div class="folder-container">
+  <div class="button-container">
+    <button mat-button (click)="goToHomeFolder()"><mat-icon>home</mat-icon>Home directory</button>
+    <button mat-button (click)="createDir()"><mat-icon>create_new_folder</mat-icon> Create new folder</button>
+    <button mat-button (click)="uploadFile()"><mat-icon>cloud_upload</mat-icon> Upload file</button>
+    <button mat-button (click)="levelBack()"><mat-icon>keyboard_backspace</mat-icon> Go up one level</button>
+  </div>
+  <div class="element-container" *ngIf="(elements| async) as elements">
+    <app-element [elem] = elem *ngFor="let elem of elements"></app-element>
+  </div>
+</div>

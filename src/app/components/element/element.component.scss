@@ -1,0 +1,39 @@
+.element{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding:26px;
+  margin:8px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color:#fff;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.element:hover{
+  background-color: #b1afaf;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+
+}
+
+.name-block{
+  display: flex;
+  margin-left:16px;
+  align-items: center;
+  justify-content:space-between;
+  width:100%;
+}
+
+.tool-block{
+  margin-left:16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-icon{
+  cursor: pointer;
+  margin: 0 8px;
+}

@@ -1,0 +1,22 @@
+<mat-dialog-content>
+  <div class="header"><h2>Create Folder:</h2></div>
+  <div class="form-container">
+    <mat-form-field [formGroup]="form">
+      <mat-label>Folder name:</mat-label>
+      <input type="text" matInput formControlName="folderName" placeholder="Folder name">
+      <mat-error *ngIf="!form.controls['folderName'].valid">
+        <div class="error-block error-empty"
+          *ngIf="form.controls['folderName'].value.length === 0">
+          Folder name required
+        </div>
+        <div class="error-block error-length"
+             *ngIf="form.controls['folderName'].value.length < 3">
+          Folder name must contain at least 3 chars, {{controlsGetter('folderName').length}} chars entered.
+        </div>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="button-container">
+    <button [disabled]="!form.valid" (click)="formSubmit()" mat-button>Create Folder</button>
+  </div>
+</mat-dialog-content>
