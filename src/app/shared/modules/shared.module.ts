@@ -14,6 +14,7 @@ import {DeleteElementComponent} from "../../components/delete-element/delete-ele
 import {CreateFolderComponent} from "../../components/create-folder/create-folder.component";
 import {LoaderComponent} from "../components/loader/loader.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {LoginComponent} from "../../components/login/login.component";
 
 
 
@@ -24,7 +25,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AddFileComponent,
     LoaderComponent,
     CreateFolderComponent,
-    DeleteElementComponent
+    DeleteElementComponent,
+    LoginComponent,
   ],
     imports: [
         CommonModule,

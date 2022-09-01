@@ -1,6 +1,6 @@
-<div class="element" (click)="action()">
+<div class="element">
   <div class="block block-icon">
-    <mat-icon>{{elem.image}}</mat-icon>
+    <mat-icon (click)="action()">{{elem.image}}</mat-icon>
   </div>
   <div class="name-block">
     <div class="block block-name">{{elem.name}}</div>

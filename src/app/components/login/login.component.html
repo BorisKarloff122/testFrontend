@@ -1,0 +1,22 @@
+<mat-dialog-content>
+  <div class="form-container">
+    <div class="form-block" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Username/Email</mat-label>
+        <input type="text" formControlName="name" matInput placeholder="Username/Email:">
+      </mat-form-field>
+    </div>
+    <div class="form-block">
+      <mat-form-field>
+        <mat-label>Password:</mat-label>
+        <input formControlName="value" matInput type="{{ showPassword? 'text' : 'password' }}" placeholder="password">
+        <mat-icon (click)="toggleShow()">{{showPassword ? 'hide' : 'show' }}</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="form-block">
+      <mat-form-field>
+        <button (click)="submitForm()">Log in</button>
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>

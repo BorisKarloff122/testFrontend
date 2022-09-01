@@ -24,7 +24,6 @@ export class AddFileComponent{
   }
 
   public removeUpload(index: number): void{
-
     this.fileArray.splice(index, 1);
     this.processFormData(this.fileArray);
   }

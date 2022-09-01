@@ -25,10 +25,9 @@ export class FolderComponent {
     let result = this.dialog.open(CreateFolderComponent,{
       width:'500px',
       height:'220px',
-      disableClose: true
     }).afterClosed().pipe(
-      mergeMap((res)=> this.dataService.createDir(res)),
-      tap(()=> this.dataService.$getCatalogDataSource.next('')
+      mergeMap((res)=> res ? this.dataService.createDir(res) : of(res)),
+      tap((res)=> res ? this.dataService.$getCatalogDataSource.next('') : of(res)
     ))
     await lastValueFrom(result);
   }
